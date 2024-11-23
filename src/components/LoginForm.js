@@ -12,8 +12,8 @@ const LoginForm = () => {
             return;
         }
 
-        const emailRegex = /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/g
-        if(emailRegex){
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email)) {
             setMessage('Por favor insira um email valido');
             return;
         }
@@ -23,7 +23,7 @@ const LoginForm = () => {
             return;
         }
 
-        setMessage('Login realizado com sucesso');
+        setMessage('Login realizado com sucesso!');
         return;
     }
 

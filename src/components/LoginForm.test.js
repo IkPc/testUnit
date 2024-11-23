@@ -27,5 +27,5 @@ test('realiza login com entradas válidas', () => {
     fireEvent.change(screen.getByLabelText(/Email/i), { target: { value: 'test@example.com' } });
     fireEvent.change(screen.getByLabelText(/password/i), { target: { value: '123456' } });
     fireEvent.click(screen.getByRole('button', { value: /Submit/i }));
-    expect(screen.getByText(/Login realizado com sucesso/i)).toBeInTheDocument();
+    expect(screen.getByText(/Login realizado com sucesso!/i)).toBeInTheDocument();
 })
